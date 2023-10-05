@@ -113,8 +113,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 if 'DYNO' in os.environ:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static_temp')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
