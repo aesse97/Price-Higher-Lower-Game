@@ -93,6 +93,12 @@ function handleGuess(isHigherGuess) {
             console.error("The element '#product2 .product-price span' was not found");
         }
     } else {
+    const product2PriceElem = document.querySelector('#product2 .product-price span');
+    if (product2PriceElem) {
+        animateValue(product2PriceElem, 0, product2Price, 1000, 'product2PriceAnimation');
+    } else {
+        console.error("The element '#product2 .product-price span' was not found");
+    }
         score = 0;
         updateScoreDisplay();
     }
