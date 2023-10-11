@@ -301,3 +301,39 @@ body {
     color: white;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+
+    h1, h2 {
+        font-size: calc(10px + 1.0vw);
+    }
+
+    .product-price {
+        font-size: 2em;
+        padding: 4px 8px;
+        bottom: 82%;
+    }
+
+    .score, .high-score, .message, .high-score-display {
+        font-size: 16px;
+    }
+
+    #playButton {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+/
+    .btn {
+        padding: 16px 28px;
+        font-size: 1.2em;
+    }
+
+    .control-container {
+        bottom: 25px;
+    }
+
+    .product-info {
+        bottom: 30%;
+        font-size: 1.2em;
+    }
+}

@@ -75,7 +75,13 @@ function animateValue(obj, start, end, duration, intervalKey) {
 
 function handleGuess(isHigherGuess) {
     resetFeedback();
-    let correctGuess = (isHigherGuess && product2Price > product1Price) || (!isHigherGuess && product2Price < product1Price);
+    const pricesAreSame = product1Price === product2Price;
+    let correctGuess;
+    if (pricesAreSame) {
+        correctGuess = true; // if prices are the same, any guess is considered correct
+    } else {
+        correctGuess = (isHigherGuess && product2Price > product1Price) || (!isHigherGuess && product2Price < product1Price);
+    }
 
     document.querySelector('#guessHigherBtn').disabled = true;
     document.querySelector('#guessLowerBtn').disabled = true;

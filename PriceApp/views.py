@@ -72,6 +72,9 @@ class GameController:
             if image_url:
                 product.image_url = image_url
                 product.save()
+            else:
+                product.delete()
+                return GameController.prefetch_product_image()
 
         return product
 
